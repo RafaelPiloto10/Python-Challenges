@@ -13,7 +13,7 @@ while True:
     tempString = ""
     for i in nothing:
         tempString += i
-    answer = re.findall("\d")
+    answer = re.findall("\d", tempString)
     
     y =("".join(nothing))
     print(y)
