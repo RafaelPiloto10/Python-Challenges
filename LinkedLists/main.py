@@ -14,7 +14,6 @@ def getNextNothing(pattern, string):
     return re.search(pattern, string)
 
 while True:
-<<<<<<< HEAD
     # Iterate through the websites
 
     #print(i)
