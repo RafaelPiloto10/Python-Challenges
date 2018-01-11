@@ -16,7 +16,7 @@ def getNextNothing(pattern, string):
 while True:
 <<<<<<< HEAD
     # Iterate through the websites
-=======
+
     #print(i)
     pasty = y
     x = urllib.request.urlopen('http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=' + str(y))
@@ -27,7 +27,6 @@ while True:
     for i in nothing:
         tempString += i
     answer = re.findall("\d", tempString)
->>>>>>> bd9d50798d7eb56706401e1efe9a81f0d09f93fe
     
     x = urllib.request.urlopen(url + str(nextNothing)) # Open Html page
     content = x.read() # Read html page
