@@ -15,18 +15,8 @@ def getNextNothing(pattern, string):
 
 while True:
     # Iterate through the websites
-
-    #print(i)
-    pasty = y
-    x = urllib.request.urlopen('http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=' + str(y))
+    x = urllib.request.urlopen('http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=' + str(nextNothing))
     content = x.read()
-    expre = re.compile(r"next nothing is 63579 \d")
-    nothing = re.findall(expre, str(content))
-    tempString = ""
-    for i in nothing:
-        tempString += i
-    answer = re.findall("\d", tempString)
-    
     x = urllib.request.urlopen(url + str(nextNothing)) # Open Html page
     content = x.read() # Read html page
 
@@ -34,7 +24,11 @@ while True:
     string = nextNothingString.group() # turn the group into a string
 
     nextNothingInt = getNextNothing(numberPattern, string) # Get next nothing int
-    nextNothing = nextNothingInt.group() # Set the next y to be the next nothing
+    try:
+        nextNothing = nextNothingInt.group() # Set the next y to be the next nothing
+    except:
+        print("Next nothing not found! Please check the most current nothing")
+
     print(nextNothing) # Print the nextNothing
 
 
