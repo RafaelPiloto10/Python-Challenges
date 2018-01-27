@@ -10,4 +10,3 @@ for line in file:
         characters[str(letter)] += 1
 for each in characters:
     print(each, characters[each])
-
